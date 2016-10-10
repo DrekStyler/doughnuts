@@ -1,0 +1,21 @@
+{% extends "_base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+
+{%for store in stores%}
+ <div class="store">
+   {{store.name}}
+   {{store.city}}
+ </div>
+{% endfor %}
+  <div class="container">
+    <h1>{{title}}</h1>
+    <h2>The sum is {{sum}}</h2>
+  </div>
+<button type="submit" onclick="window.location='./employees/new';">Add a New Employee</button>
+<button type="submit" onclick="window.location='./doughnuts/new';">Add a New Doughnut</button>
+<button type="submit" onclick="window.location='./stores/new';">Add a New Store</button>
+{% endblock %}

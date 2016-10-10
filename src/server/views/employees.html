@@ -1,0 +1,19 @@
+{% extends "_base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<h1>Employee Page</h1>
+
+{% for employee in employees %}
+ <p class="store">
+   <div>{{employee.first_name}} {{employee.last_name}}</div>
+   <div>{{employee.email}}</div>
+   <div>{{favorite_doughnut}}</div>
+   <button class='del-but'>Delete</button>
+   <button class='edit-but'>Edit</button>
+ </p>
+{% endfor %}
+
+{% endblock %}
