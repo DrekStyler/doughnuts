@@ -13,8 +13,8 @@
     // *** register routes *** //
     app.use('/', routes);
     app.use('/doughnuts', doughnutRoute);
-    app.use('/employees', empRoute)
-    app.use('/stores', storeRoute)
+    app.use('/employees', empRoute);
+    app.use('/stores', storeRoute);
 
   };
 })(module.exports);

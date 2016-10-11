@@ -10,9 +10,9 @@
  <p class="store">
    <div>{{doughnut.name}} Doughnut</div>
    <div>${{doughnut.price}}.00</div>
-   <div>Sprinkled {{doughnut.topping}}!</div>
+   <div>Sprinkled {{doughnut.toppings}}!</div>
    <button class='del-but'>Delete</button>
-   <button class='edit-but'>Edit</button>
+   <button onclick="window.location='doughnuts/{{doughnut.id}}/edit'" class='edit-but'>Edit</button>
  </p>
 {% endfor %}
 

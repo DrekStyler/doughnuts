@@ -10,9 +10,9 @@
  <p class="store">
    <div>{{employee.first_name}} {{employee.last_name}}</div>
    <div>{{employee.email}}</div>
-   <div>{{favorite_doughnut}}</div>
+   <div>{{employee.favorite_doughnut}}</div>
    <button class='del-but'>Delete</button>
-   <button class='edit-but'>Edit</button>
+   <button onclick="window.location='/employees/{{employee.id}}/edit'"class='edit-but'>Edit</button>
  </p>
 {% endfor %}
 

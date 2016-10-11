@@ -5,11 +5,20 @@
 {% block content %}
 
 <h1>Store Page</h1>
- <p class="store">
-   <div>{{store.name}}</div>
-   <div>{{store.city}}</div>
+<p class="store">
+   {% for s in store%}
+   <div>{{s.name}} Doughnut Shop!</div>
+   <div>Located in {{s.city}} City!</div>
+   {% endfor %}
+</p>
+<div>
+   {% for d in doughnuts %}
+    <div>{{d.name}} Doughnut</div>
+    <div>${{d.price}}.00</div>
+    <div>{{d.toppings}} Topping</div>
+    {% endfor %}
    <button class='del-but'>Delete</button>
    <button class='edit-but'>Edit</button>
- </p>
+</div>
 
 {% endblock %}

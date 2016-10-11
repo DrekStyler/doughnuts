@@ -3,8 +3,8 @@ const faker = require('faker');
 exports.seed = function(knex, Promise) {
   let numOfArr = new Array(100);
   let newE = Array.from(numOfArr).map(() => {
-    return newEmployee(knex);
-});
+      return newEmployee(knex);
+    });
   return Promise.all(newE);
 };
 

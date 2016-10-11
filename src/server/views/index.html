@@ -12,10 +12,12 @@
  </div>
 {% endfor %}
   <div class="container">
-    <h1>{{title}}</h1>
-    <h2>The sum is {{sum}}</h2>
+    <h1>Derek's Doughnuts</h1>
   </div>
-<button type="submit" onclick="window.location='./employees/new';">Add a New Employee</button>
-<button type="submit" onclick="window.location='./doughnuts/new';">Add a New Doughnut</button>
-<button type="submit" onclick="window.location='./stores/new';">Add a New Store</button>
+<button type="submit" onclick="window.location='/employees/new';">Add a New Employee</button>
+<button type="submit" onclick="window.location='/doughnuts/new';">Add a New Doughnut</button>
+<button type="submit" onclick="window.location='/stores/new';">Add a New Store</button>
+<button type="submit" onclick="window.location='/stores/';">Find a Store!</button>
+<button type="submit" onclick="window.location='/doughnuts';">Find a Doughnut!</button>
+<button type="submit" onclick="window.location='/employees';">Find an Employee!</button>
 {% endblock %}

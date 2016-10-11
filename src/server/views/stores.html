@@ -11,7 +11,7 @@
    <div>{{store.name}}</div>
    <div>{{store.city}}</div>
    <button class='del-but'>Delete</button>
-   <button class='edit-but'>Edit</button>
+   <button onclick="window.location='/stores/{{store.id}}/edit'"class='edit-but'>Edit</button>
  </p>
 {% endfor %}
 

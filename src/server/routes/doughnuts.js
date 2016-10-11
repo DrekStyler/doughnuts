@@ -30,10 +30,34 @@ router.post('/new', (req,res,next) => {
     res.redirect('/');
   });
 });
-
-router.get('/:id' ,(req,res,next) =>{
+router.get('/:id/edit', (req, res, next) => {
   let id = req.params.id;
-  knex('doughnuts').where({'id' : id})
+  knex('doughnuts').select().where('id',id)
+  .then((results) => {
+      let renderObj = {};
+      renderObj.doughnut = results[0];
+      res.render('edit_doughnut', renderObj);
+    });
+});
+
+router.post('/:id/edit', (req, res, next) => {
+  let id = req.params.id;
+  let name = req.body.name;
+  let price = req.body.price;
+  let toppings = req.body.toppings;
+  knex('doughnuts').update({
+    name:name,
+    price:price,
+    toppings:toppings
+  }).where('id', id)
+  .then((results) => {
+    res.redirect('/');
+  });
+
+});
+router.get('/:id', (req,res,next) => {
+  let id = req.params.id;
+  knex('doughnuts').where({id:id})
   .then((results) => {
     let renderObj = {};
     renderObj.doughnut = results[0];
